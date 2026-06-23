@@ -1,18 +1,16 @@
 package com.subcription.demo.service;
 
+import com.subcription.demo.dto.SubscriptionWithUserDto;
 import com.subcription.demo.dto.subscriptionRequestDTO;
-import com.subcription.demo.entity.subscription;
-import jakarta.validation.Valid;
+import com.subcription.demo.dto.subscriptionResponseDto;
 
 import java.util.List;
 
 public interface SubscriptionService {
-    subscription createSubscription(@Valid subscriptionRequestDTO dto);
-    List<subscription> getAllSubscriptions();
-    subscriptionRequestDTO getSubscriptionById(Long id);
-    subscriptionRequestDTO updateSubscription(Long id, @Valid subscriptionRequestDTO requestDTO);
-
+    subscriptionResponseDto createSubscription(subscriptionRequestDTO dto);
+    List<subscriptionResponseDto> getAllSubscriptions();
+    subscriptionResponseDto getSubscriptionById(Long id);
+    subscriptionResponseDto updateSubscription(Long id, subscriptionRequestDTO requestDTO);
     void deleteSubscripption(Long id);
-
-
+    List<SubscriptionWithUserDto> getSubscriptionsByUserId(Long userId);
 }

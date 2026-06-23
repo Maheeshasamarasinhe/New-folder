@@ -1,7 +1,8 @@
 package com.subcription.demo.controller;
 
+import com.subcription.demo.dto.SubscriptionWithUserDto;
 import com.subcription.demo.dto.subscriptionRequestDTO;
-import com.subcription.demo.entity.subscription;
+import com.subcription.demo.dto.subscriptionResponseDto;
 import com.subcription.demo.service.SubscriptionService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -14,49 +15,38 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/subscription")
 @RequiredArgsConstructor
-
-
 public class subscriptionController {
 
     private final SubscriptionService subscriptionService;
 
     @PostMapping("/create")
-    public ResponseEntity<subscription> createSubscription(@Valid @RequestBody subscriptionRequestDTO requestDTO) {
-        // Call the service layer to create a new subscription
-
+    public ResponseEntity<subscriptionResponseDto> createSubscription(@Valid @RequestBody subscriptionRequestDTO requestDTO) {
         return new ResponseEntity<>(subscriptionService.createSubscription(requestDTO), HttpStatus.CREATED);
-
-
     }
 
     @GetMapping("/getAll")
-
-       public ResponseEntity<List<subscription>> getAllSubscriptions() {
-            // Call the service layer to retrieve all subscriptions
-            return ResponseEntity.ok(subscriptionService.getAllSubscriptions());
+    public ResponseEntity<List<subscriptionResponseDto>> getAllSubscriptions() {
+        return ResponseEntity.ok(subscriptionService.getAllSubscriptions());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<subscriptionRequestDTO> getSubscriptionById(@PathVariable Long id) {
-        // Call the service layer to retrieve a subscription by ID
+    public ResponseEntity<subscriptionResponseDto> getSubscriptionById(@PathVariable Long id) {
         return ResponseEntity.ok(subscriptionService.getSubscriptionById(id));
     }
 
-    @DeleteMapping("delete/{id}")
-
-    public  ResponseEntity<Void> deleteGroup(@PathVariable Long id){
-        subscriptionService.deleteSubscripption(id);
-        return ResponseEntity.noContent().build();
-
+    @GetMapping("user/{userId}")
+    public ResponseEntity<List<SubscriptionWithUserDto>> getSubscriptionsByUserId(@PathVariable Long userId) {
+        return ResponseEntity.ok(subscriptionService.getSubscriptionsByUserId(userId));
     }
 
-    @PutMapping ("/update/{id}")
-    public ResponseEntity<subscriptionRequestDTO> updateSubscription(@PathVariable Long id, @Valid @RequestBody subscriptionRequestDTO requestDTO) {
-        // Call the service layer to update a subscription
+    @PutMapping("/update/{id}")
+    public ResponseEntity<subscriptionResponseDto> updateSubscription(@PathVariable Long id, @Valid @RequestBody subscriptionRequestDTO requestDTO) {
         return ResponseEntity.ok(subscriptionService.updateSubscription(id, requestDTO));
     }
 
-
-
+    @DeleteMapping("delete/{id}")
+    public ResponseEntity<Void> deleteGroup(@PathVariable Long id) {
+        subscriptionService.deleteSubscripption(id);
+        return ResponseEntity.noContent().build();
+    }
 }
-

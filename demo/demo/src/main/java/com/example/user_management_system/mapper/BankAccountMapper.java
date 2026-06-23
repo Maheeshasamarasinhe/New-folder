@@ -6,6 +6,8 @@ import com.example.user_management_system.entity.BankAccount;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
+import org.springframework.context.annotation.Bean;
+
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface BankAccountMapper {

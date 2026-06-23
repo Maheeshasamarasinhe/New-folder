@@ -1,20 +1,21 @@
 package com.subcription.demo.dto;
 
-import lombok.Data;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-
-
+@NoArgsConstructor
+@AllArgsConstructor
 public class subscriptionRequestDTO {
 
-    @NotBlank (message = "Name is mandatory")
+    @NotBlank(message = "Name is mandatory")
     private String name;
     private String description;
-    @NotBlank( message = "Duration is mandatory")
-    private double price;
-
-
+    @NotNull(message = "Price is mandatory")
+    private Double price;
+    @NotNull(message = "User ID is mandatory")
+    private Long userId;
 }

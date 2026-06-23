@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61ba57da-2382-413f-8a5e-4d6ad1890122" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/demo/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/main/java/com/example/user_management_system/controller/BankAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/main/java/com/example/user_management_system/controller/BankAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/test/java/com/example/user_management_system/service/impl/BankAccountServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/test/java/com/example/user_management_system/service/impl/BankAccountServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/test/java/com/example/user_management_system/service/impl/GroupServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/test/java/com/example/user_management_system/service/impl/GroupServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo/src/test/java/com/example/user_management_system/service/impl/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/demo/demo/src/test/java/com/example/user_management_system/service/impl/UserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/controller/subscriptionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/controller/subscriptionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/dto/subscriptionRequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/dto/subscriptionRequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/dto/subscriptionResponseDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/dto/subscriptionResponseDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/entity/subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/entity/subscription.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/mapper/subscriptionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/mapper/subscriptionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/repository/SubscriptionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/repository/SubscriptionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/service/SubscriptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/service/SubscriptionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/service/impl/SubscriptionServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/src/main/java/com/subcription/demo/service/impl/SubscriptionServiceimpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/subcription-service/demo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/subcription-service/demo/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,19 +31,26 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="186" />
+    <option name="cachedIndexableFilesCount" value="205" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/demo" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3FU3YtyjQMj9Hl73zHlpgiGRYVR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -44,6 +58,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.DemoApplication.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -62,6 +77,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.user_management_system.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -78,6 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1782115872708</updated>
       <workItem from="1782115875929" duration="408000" />
+      <workItem from="1782122296477" duration="367000" />
     </task>
     <servers />
   </component>
