@@ -4,6 +4,7 @@ import com.example.user_management_system.dto.UserRequestDto;
 import com.example.user_management_system.dto.UserResponseDto;
 import com.example.user_management_system.entity.User;
 import com.example.user_management_system.exception.DataValidationException;
+import com.example.user_management_system.exception.DuplicateAccountException;
 import com.example.user_management_system.exception.NotFoundException;
 import com.example.user_management_system.mapper.UserMapper;
 import com.example.user_management_system.repository.UserRepository;
@@ -26,7 +27,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserResponseDto createUser(UserRequestDto dto) {
         if (userRepository.existsByEmail(dto.getEmail())) {
-            throw new NotFoundException("User with email " + dto.getEmail() + " already exists");
+            throw new DuplicateAccountException("User with email " + dto.getEmail() + " already exists");
         }
 
         User user = userMapper.toEntity(dto);

@@ -32,6 +32,18 @@
         <module name="demo (1) (com.example)" />
         <module name="demo (2) (com.subcription)" />
       </profile>
+      <profile name="Annotation profile for subscription-service" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+        </processorPath>
+        <module name="subscription-service" />
+        <module name="user-service" />
+      </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
@@ -40,6 +52,8 @@
       <module name="demo (1) (com.example)" options="-parameters" />
       <module name="demo (1) (com.subcription)" options="-parameters" />
       <module name="demo (2) (com.subcription)" options="-parameters" />
+      <module name="subscription-service" options="-parameters" />
+      <module name="user-service" options="-parameters" />
     </option>
   </component>
 </project>

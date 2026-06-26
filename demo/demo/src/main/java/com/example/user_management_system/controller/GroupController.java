@@ -7,6 +7,7 @@ import com.example.user_management_system.dto.GroupResponseDto;
 import com.example.user_management_system.service.GroupService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,14 +15,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/groups")
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/groups")
 @RequiredArgsConstructor
+@Slf4j
 public class GroupController {
 
     private final GroupService groupService;
 
     @PostMapping("/create")
     public ResponseEntity<GroupResponseDto> createGroup(@Valid @RequestBody GroupRequestDto requestDto) {
+        log.info("GROUP CREATE");
         return new ResponseEntity<>(groupService.createGroup(requestDto), HttpStatus.CREATED);
     }
 

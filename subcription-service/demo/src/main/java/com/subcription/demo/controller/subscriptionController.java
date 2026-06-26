@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/subscription")
+@CrossOrigin(origins = "http://localhost:3000")
+
+@RequestMapping("/subscription")
 @RequiredArgsConstructor
 public class subscriptionController {
 
@@ -26,6 +28,7 @@ public class subscriptionController {
 
     @GetMapping("/getAll")
     public ResponseEntity<List<subscriptionResponseDto>> getAllSubscriptions() {
+
         return ResponseEntity.ok(subscriptionService.getAllSubscriptions());
     }
 

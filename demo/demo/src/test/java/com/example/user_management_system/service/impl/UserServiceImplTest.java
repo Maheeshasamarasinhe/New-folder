@@ -4,6 +4,7 @@ import com.example.user_management_system.MockData;
 import com.example.user_management_system.dto.UserRequestDto;
 import com.example.user_management_system.dto.UserResponseDto;
 import com.example.user_management_system.entity.User;
+import com.example.user_management_system.exception.DuplicateAccountException;
 import com.example.user_management_system.exception.NotFoundException;
 import com.example.user_management_system.mapper.UserMapper;
 import com.example.user_management_system.repository.UserRepository;
@@ -56,11 +57,12 @@ class UserServiceImplTest {
     }
 
     @Test
-    void createUser_duplicateEmail_throwsNotFoundException() {
+    void createUser_duplicateEmail_throwsDuplicateAccountException() {
         when(userRepository.existsByEmail(requestDto.getEmail())).thenReturn(true);
 
         assertThatThrownBy(() -> userService.createUser(requestDto))
-                .isInstanceOf(NotFoundException.class);
+                .isInstanceOf(DuplicateAccountException.class)
+                .hasMessageContaining(requestDto.getEmail());
 
         verify(userRepository, never()).save(any());
     }

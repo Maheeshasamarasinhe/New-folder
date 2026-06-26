@@ -7,18 +7,23 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+
       routes:
         - id: user-service
-          uri: lb://user-service
+          uri: http://localhost:8085
           predicates:
-            - Path=/api/users/**
+            - Path=/api/v1/user-service/**
+
         - id: subscription-service
-          uri: lb://subscription-service
+          uri: http://localhost:8086
           predicates:
-            - Path=/api/v1/subscription/**
+            - Path=/api/v1/subscription-service/**
+
 
 server:
   port: 8087
+
+
 
 eureka:
   client:
